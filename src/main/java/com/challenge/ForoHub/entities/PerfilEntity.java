@@ -24,6 +24,6 @@ public class PerfilEntity {
 	@Column(nullable = false, unique = true)
 	private String nombre;
 	
-	 @ManyToMany(mappedBy = "perfiles", fetch = FetchType.LAZY) 
+	 @ManyToMany(mappedBy = "perfiles", fetch = FetchType.EAGER) 
 	 private Set<UsuarioEntity> usuarios = new HashSet<>();
 }
